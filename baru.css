@@ -1,0 +1,174 @@
+/* ================= RESET DASAR ================= */
+
+/* Menghilangkan margin & padding bawaan browser
+   serta memastikan ukuran elemen konsisten */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Font utama */
+}
+
+/* ================= CONTAINER ================= */
+
+/* Pembungkus konten agar rapi & di tengah */
+.container {
+  width: 90%; /* Lebar 90% layar */
+  max-width: 1100px; /* Batas maksimal lebar */
+  margin: auto; /* Tengah secara horizontal */
+}
+
+/* ================= NAVBAR ================= */
+
+/* Area navigasi atas */
+.navbar {
+  border-bottom: 1px solid #ccc; /* Garis bawah navbar */
+  padding: 25px 10px; /* Jarak atas & bawah */
+}
+
+/* Isi navbar (brand & menu) */
+.nav-content {
+  display: flex; /* Sejajar horizontal */
+  justify-content: space-between; /* Brand kiri, menu kanan */
+  align-items: center; /* Rata tengah vertikal */
+}
+
+/* Menu navigasi */
+.nav-menu {
+  list-style: none; /* Menghilangkan bullet list */
+  display: flex; /* Menu sejajar */
+  gap: 20px; /* Jarak antar menu */
+}
+
+/* Link menu */
+.nav-menu a {
+  text-decoration: none; /* Hilangkan garis bawah */
+  color: #000; /* Warna teks hitam */
+}
+
+/* ================= HEADER ================= */
+
+/* Section header utama */
+.header {
+  padding: 40px 0; /* Jarak atas & bawah */
+  border-bottom: 1px solid #ccc; /* Garis pemisah */
+}
+
+/* Konten header (2 kolom) */
+.header-content {
+  align-items: flex-start; /* Rata atas */
+  display: flex; /* Layout fleksibel */
+  gap: 50px; /* Jarak antar kolom */
+}
+
+/* Kolom teks header */
+.header-text {
+  flex: 1;
+  text-align: left; /* Rata kiri */
+  align-self: flex-start; /* Align text to the top */
+}
+
+/* Judul header */
+.header-text h1 {
+  margin-bottom: 15px; /* Jarak bawah judul */
+  text-align: left; /* Rata kiri */
+}
+
+/* Paragraf header */
+.header-text p {
+  margin-bottom: 20px; /* Jarak ke tombol */
+  text-align: left; /* Rata kiri */
+}
+
+/* Tombol */
+.btn {
+  display: inline-block; /* Bisa diberi padding */
+  padding: 10px 20px; /* Ukuran tombol */
+  border: 1px solid #000; /* Garis tombol */
+  text-decoration: none; /* Hilangkan underline */
+  color: #000; /* Warna teks */
+}
+
+/* Kolom gambar header */
+.header-image {
+  flex: 1; /* Lebar sama dengan teks */
+  display: grid; /* Gunakan grid */
+}
+
+/* ================= PLACEHOLDER GAMBAR ================= */
+
+/* Gaya umum placeholder */
+.placeholder {
+  background: #ddd; /* Warna abu-abu */
+  display: flex; /* Untuk center teks */
+  align-items: center; /* Tengah vertikal */
+  justify-content: center; /* Tengah horizontal */
+  color: #999; /* Warna teks */
+  font-weight: bold; /* Teks tebal */
+}
+
+/* Placeholder besar (header) */
+.placeholder.large {
+  height: 400px; /* Tinggi 400px */
+}
+
+/* Placeholder kecil (portfolio) */
+.placeholder.small {
+  height: 200px; /* Tinggi 200px */
+}
+
+/* ================= ABOUT ME ================= */
+
+/* Section About */
+.about {
+  padding: 40px 0; /* Jarak atas bawah */
+  border-bottom: 1px solid #ccc; /* Garis pemisah */
+  text-align: center; /* Teks rata tengah */
+}
+
+/* Subjudul */
+.subtitle {
+  color: #666; /* Warna abu-abu */
+  margin-bottom: 30px; /* Jarak ke grid */
+}
+
+/* Grid biodata */
+.about-grid {
+  display: grid; /* Layout grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  gap: 15px; /* Jarak antar box */
+}
+
+/* Kotak biodata */
+.about-box {
+  border: 1px solid #ddd; /* Garis kotak */
+  padding: 10px; /* Jarak dalam */
+  background: #f7f7f7; /* Warna latar */
+}
+
+/* ================= PORTFOLIO ================= */
+
+/* Section portfolio */
+.portfolio {
+  padding: 40px 0; /* Jarak atas bawah */
+  text-align: center; /* Teks rata tengah */
+}
+
+/* Grid portfolio */
+.portfolio-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  gap: 20px; /* Jarak antar card */
+  margin-top: 30px; /* Jarak dari judul */
+}
+
+/* Card proyek */
+.card {
+  border: 1px solid #ccc; /* Garis card */
+  padding: 15px; /* Jarak dalam */
+}
+
+/* Judul proyek */
+.card h4 {
+  margin: 10px 0 5px; /* Atas | samping | bawah */
+}
