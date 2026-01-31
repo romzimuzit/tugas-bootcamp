@@ -1,174 +1,204 @@
-/* ================= RESET DASAR ================= */
-
-/* Menghilangkan margin & padding bawaan browser
-   serta memastikan ukuran elemen konsisten */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif; /* Font utama */
+  font-family: Arial, sans-serif;
 }
 
-/* ================= CONTAINER ================= */
+body {
+  line-height: 1.6;
+}
 
-/* Pembungkus konten agar rapi & di tengah */
+/* ================= GLOBAL ================= */
 .container {
-  width: 90%; /* Lebar 90% layar */
-  max-width: 1100px; /* Batas maksimal lebar */
-  margin: auto; /* Tengah secara horizontal */
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* ================= NAVBAR ================= */
-
-/* Area navigasi atas */
 .navbar {
-  border-bottom: 1px solid #ccc; /* Garis bawah navbar */
-  padding: 25px 10px; /* Jarak atas & bawah */
+  background: #1e293b;
+  padding: 15px 10px;
 }
 
-/* Isi navbar (brand & menu) */
 .nav-content {
-  display: flex; /* Sejajar horizontal */
-  justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center; /* Rata tengah vertikal */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Menu navigasi */
+.beranda {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .nav-menu {
-  list-style: none; /* Menghilangkan bullet list */
-  display: flex; /* Menu sejajar */
-  gap: 20px; /* Jarak antar menu */
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-/* Link menu */
-.nav-menu a {
-  text-decoration: none; /* Hilangkan garis bawah */
-  color: #000; /* Warna teks hitam */
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu li a:hover {
+  text-decoration: underline;
 }
 
 /* ================= HEADER ================= */
-
-/* Section header utama */
 .header {
-  padding: 40px 0; /* Jarak atas & bawah */
-  border-bottom: 1px solid #ccc; /* Garis pemisah */
+  padding: 60px 0;
+  background: #f1f5f9;
 }
 
-/* Konten header (2 kolom) */
 .header-content {
-  align-items: flex-start; /* Rata atas */
-  display: flex; /* Layout fleksibel */
-  gap: 50px; /* Jarak antar kolom */
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-/* Kolom teks header */
 .header-text {
   flex: 1;
-  text-align: left; /* Rata kiri */
-  align-self: flex-start; /* Align text to the top */
 }
 
-/* Judul header */
-.header-text h1 {
-  margin-bottom: 15px; /* Jarak bawah judul */
-  text-align: left; /* Rata kiri */
-}
-
-/* Paragraf header */
-.header-text p {
-  margin-bottom: 20px; /* Jarak ke tombol */
-  text-align: left; /* Rata kiri */
-}
-
-/* Tombol */
-.btn {
-  display: inline-block; /* Bisa diberi padding */
-  padding: 10px 20px; /* Ukuran tombol */
-  border: 1px solid #000; /* Garis tombol */
-  text-decoration: none; /* Hilangkan underline */
-  color: #000; /* Warna teks */
-}
-
-/* Kolom gambar header */
 .header-image {
-  flex: 1; /* Lebar sama dengan teks */
-  display: grid; /* Gunakan grid */
+  flex: 1;
+  text-align: center;
 }
 
-/* ================= PLACEHOLDER GAMBAR ================= */
-
-/* Gaya umum placeholder */
-.placeholder {
-  background: #ddd; /* Warna abu-abu */
-  display: flex; /* Untuk center teks */
-  align-items: center; /* Tengah vertikal */
-  justify-content: center; /* Tengah horizontal */
-  color: #999; /* Warna teks */
-  font-weight: bold; /* Teks tebal */
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
 }
 
-/* Placeholder besar (header) */
-.placeholder.large {
-  height: 400px; /* Tinggi 400px */
+.btn:hover {
+  background: #1e40af;
 }
 
-/* Placeholder kecil (portfolio) */
-.placeholder.small {
-  height: 200px; /* Tinggi 200px */
-}
-
-/* ================= ABOUT ME ================= */
-
-/* Section About */
+/* ================= ABOUT ================= */
 .about {
-  padding: 40px 0; /* Jarak atas bawah */
-  border-bottom: 1px solid #ccc; /* Garis pemisah */
-  text-align: center; /* Teks rata tengah */
+  padding: 60px 0;
 }
 
-/* Subjudul */
+.about h2 {
+  text-align: center;
+}
+
 .subtitle {
-  color: #666; /* Warna abu-abu */
-  margin-bottom: 30px; /* Jarak ke grid */
+  text-align: center;
+  margin-bottom: 30px;
+  color: gray;
 }
 
-/* Grid biodata */
 .about-grid {
-  display: grid; /* Layout grid */
-  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
-  gap: 15px; /* Jarak antar box */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-/* Kotak biodata */
 .about-box {
-  border: 1px solid #ddd; /* Garis kotak */
-  padding: 10px; /* Jarak dalam */
-  background: #f7f7f7; /* Warna latar */
+  padding: 20px;
+  background: #e5e7eb;
+  text-align: center;
+  border-radius: 8px;
 }
 
 /* ================= PORTFOLIO ================= */
-
-/* Section portfolio */
 .portfolio {
-  padding: 40px 0; /* Jarak atas bawah */
-  text-align: center; /* Teks rata tengah */
+  background: #f8fafc;
+  padding: 60px 0;
 }
 
-/* Grid portfolio */
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .portfolio-grid {
-  display: grid; /* Grid layout */
-  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
-  gap: 20px; /* Jarak antar card */
-  margin-top: 30px; /* Jarak dari judul */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
-/* Card proyek */
 .card {
-  border: 1px solid #ccc; /* Garis card */
-  padding: 15px; /* Jarak dalam */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Judul proyek */
-.card h4 {
-  margin: 10px 0 5px; /* Atas | samping | bawah */
+.placeholder {
+  background: #cbd5f5;
+  padding: 60px 0;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+
+  .nav-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 40px 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
