@@ -15,6 +15,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  color: hsl(0, 0%, 0%);
 }
 
 img.img-fluid {
@@ -26,7 +27,7 @@ img.img-fluid {
 /* ================= NAVBAR ================= */
 .navbar {
   background: #1e293b;
-  padding: 15px 10px;
+  padding: 15px 15px;
 }
 
 .nav-content {
@@ -56,6 +57,60 @@ img.img-fluid {
   text-decoration: underline;
 }
 
+/*humbgerger*/
+/* Navbar */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menu default (desktop) */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #6c2cff;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
 /* ================= HEADER ================= */
 .header {
   padding: 60px 0;
@@ -73,15 +128,67 @@ img.img-fluid {
 }
 
 .header-image {
-  flex: 1;
   text-align: center;
+  flex: 1; /* Menambahkan flex: 1 untuk membuat gambar menyesuaikan ruang */
+}
+
+
+/* Ring gradasi */
+.avatar-ring {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    hwb(248 3% 33%),
+    hsla(29, 96%, 56%, 0.855)
+  );
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  margin: auto;
+}
+.avatar-ring img {
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Foto */
+.profile-img {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 5px solid #fff;
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  color: #000;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: hsl(249, 95%, 55%);
 }
 
 .btn {
-  margin-top: 20px;
+  display: inline-block;
   padding: 12px 24px;
   border: none;
-  background: #2563eb;
+  background: hwb(36 0% 0%);
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
@@ -89,7 +196,7 @@ img.img-fluid {
 }
 
 .btn:hover {
-  background: #1e40af;
+  background: oklab(26.465% 0.00012 -0.00578);
 }
 
 /* ================= ABOUT ================= */
@@ -104,7 +211,7 @@ img.img-fluid {
 .subtitle {
   text-align: center;
   margin-bottom: 30px;
-  color: gray;
+  color: #000000;
 }
 
 .about-grid {
@@ -142,7 +249,7 @@ img.img-fluid {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .placeholder {
@@ -154,7 +261,6 @@ img.img-fluid {
 
 /* ================= TABLET ================= */
 @media (max-width: 992px) {
-
   .header-content {
     flex-direction: column;
     text-align: center;
@@ -175,7 +281,6 @@ img.img-fluid {
 
 /* ================= MOBILE ================= */
 @media (max-width: 576px) {
-
   .nav-content {
     flex-direction: column;
     gap: 10px;
