@@ -301,9 +301,11 @@ img.img-fluid {
 
   .header {
     padding: 40px 0;
+    text-align: left;
   }
 
   .btn {
     width: 100%;
+    text-align: center;
   }
 }
